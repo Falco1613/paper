@@ -1,10 +1,14 @@
 *
   box-sizing: border-box
 body
+  font-family: 'Playfair Display', serif
   margin: 0
   padding: 0
   background-color: #000
   color: #fff
+  font-style: normal
+  font-weight: 400
+// Хэдер - Лого и Меню
 .header
   padding-top: 35px
   padding-bottom: 25px
@@ -16,19 +20,163 @@ body
     margin: auto
 .logo
   text-decoration: none
+  z-index: 2
 .main-menu
   display: flex
   align-items: center
   margin: 0
   padding: 0
   list-style-type: none
+  &__item
+    z-index: 2
   &__item:not(:last-child)
     margin-right: 40px
   &__link
-    font-family: 'Playfair Display'
-    font-style: normal
-    font-weight: 400
     font-size: 22px
     line-height: 0px
     color: #fff
+    text-decoration: none
+
+// Секция
+.section
+  position: relative
+  padding-bottom: 80px
+  z-index: 1
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    background: rgba(0, 0, 0, 0.2)
+    z-index: 1
+  &__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 1200px
+    margin: auto
+  &__title
+    max-width: 1200px
+    font-size: 140px
+    font-style: normal
+    font-weight: 400
+    line-height: 154px
+    margin-top: 0
+    margin-bottom: 0
+    text-align: center
+    z-index: 2
+    &_mt_168
+      margin-top: 168px
+    &_mt_272
+      margin-top: 272px
+    &_mt_196
+      margin-top: 196px
+    &_mb_46
+      margin-bottom: 46px
+  &__subtitle
+    max-width: 304px
+    font-size: 24px
+    font-style: normal
+    font-weight: 400
+    line-height: 38px
+    margin-top: 0
+    margin-bottom: 0
+    z-index: 2
+    &_mt_0
+      margin-top: 0
+    &_mb_165
+      margin-bottom: 165px
+    &_mb_88
+      margin-bottom: 88px
+@for $i from 1 through 5
+  .section_bgi_#{$i}
+    background-image: url(../img/bg-#{$i}.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+
+// Ссылка кнопка
+.button
+  font-family: 'Lato', sans-serif
+  font-size: 12px
+  line-height: 24px
+  letter-spacing: 0.5px
+  padding: 10px 33px
+  color: #FFFFFF
+  text-decoration: none
+  border: 1px solid #FFFFFF
+  border-radius: 30px
+  text-transform: uppercase
+  z-index: 2
+  &_white
+    font-size: 14px
+    background-color: #fff
+    color: #111
+    padding: 9px 30px
+    border: none
+
+// Секция Project
+.project
+  padding-top: 120px
+  padding-bottom: 100px
+  // border-bottom: 1px solid #fff
+  &__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 740px
+    margin: auto
+    // border: 1px solid white
+  &__title
+    font-style: normal
+    font-weight: 400
+    font-size: 50px
+    line-height: 70px
+    &_mt_0
+      margin-top: 0
+    &_mb_5
+      margin-bottom: 5px
+  &__subtutle
+    font-style: normal
+    font-weight: 400
+    font-size: 23px
+    line-height: 38px
+    &_mt_0
+      margin-top: 0
+    &_mb_60
+      margin-bottom: 60px
+// Блок футер
+.footer
+  font-family: 'Open Sans'
+  font-size: 13px
+  padding-top: 50px
+  padding-bottom: 40px
+  color: #666666
+  &__wrapper
+    max-width: 1200px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: auto
+  &__copyright
+    line-height: 21px
+  &__icon
+    color: red
+  &__by
+    line-height: 28px
+    &_margin
+      margin-left: 10px
+      margin-right: auto
+  &__menu
+    display: flex
+    align-items: center
+    margin: 0
+    padding: 0
+    list-style-type: none
+  &__item:not(:last-child)
+    margin-right: 20px
+  &__link
+    line-height: 28px
+    color: #666666
     text-decoration: none
