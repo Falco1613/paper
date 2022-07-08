@@ -1,1 +1,34 @@
-
+*
+  box-sizing: border-box
+body
+  margin: 0
+  padding: 0
+  background-color: #000
+  color: #fff
+.header
+  padding-top: 35px
+  padding-bottom: 25px
+  &__wrapper
+    max-width: 1338px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: auto
+.logo
+  text-decoration: none
+.main-menu
+  display: flex
+  align-items: center
+  margin: 0
+  padding: 0
+  list-style-type: none
+  &__item:not(:last-child)
+    margin-right: 40px
+  &__link
+    font-family: 'Playfair Display'
+    font-style: normal
+    font-weight: 400
+    font-size: 22px
+    line-height: 0px
+    color: #fff
+    text-decoration: none
